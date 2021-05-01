@@ -1,9 +1,11 @@
 import Button from './Button'
+import Dialog from './Dialog'
 
-const StarUI = {}
-const StButton = {}
+const StarUI = {},
+	StButton = {},
+	StDialog = {}
 
-const COMPONENTS = [Button]
+const COMPONENTS = [Button, Dialog]
 
 StarUI.install = (Vue, options) => {
 	if (options && options.components) {
@@ -20,7 +22,8 @@ StarUI.install = (Vue, options) => {
 }
 
 StButton.install = Vue => Vue.component(Button.name, Button)
+StDialog.install = Vue => Vue.component(Dialog.name, Dialog)
 
-export { StButton }
+export { StButton, StDialog }
 
 export default StarUI
