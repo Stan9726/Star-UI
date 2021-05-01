@@ -19,9 +19,9 @@
 				<div class="st-dialog_body">
 					<slot></slot>
 				</div>
-				<div class="st-dialog_footer">
-					<slot name="footer"
-								v-if="$slots.footer"></slot>
+				<div class="st-dialog_footer"
+						 v-if="$slots.footer">
+					<slot name="footer"></slot>
 				</div>
 			</div>
 		</div>
