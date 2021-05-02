@@ -75,11 +75,31 @@
 							 width="30%"
 							 top="80px"
 							 :visible.sync="visible">
-			<ul>
-				<li>第一点</li>
-				<li>第二点</li>
-				<li>第三点</li>
-			</ul>
+			<st-form :model="model"
+							 labelWidth="60px">
+				<st-form-item label="用户名">
+					<st-input placeholder="请输入用户名"
+										v-model="model.username"></st-input>
+				</st-form-item>
+				<st-form-item label="性别">
+					<st-radio-group v-model="model.gender">
+						<st-radio label="男">男</st-radio>
+						<st-radio label="女">女</st-radio>
+					</st-radio-group>
+				</st-form-item>
+				<st-form-item label="爱好">
+					<st-checkbox-group v-model="model.hobbies">
+						<st-checkbox label="football">足球</st-checkbox>
+						<st-checkbox label="guitar">吉他</st-checkbox>
+						<st-checkbox label="swim">游泳</st-checkbox>
+					</st-checkbox-group>
+				</st-form-item>
+				<st-form-item label="已阅读">
+					<st-switch v-model="model.hasRead"
+										 active-color="#13ce66"
+										 inactive-color="#ff4949"></st-switch>
+				</st-form-item>
+			</st-form>
 			<template v-slot:footer>
 				<st-button @click="visible = false">取消</st-button>
 				<st-button class="button-confirm"
@@ -101,6 +121,27 @@
 								 active-color="#13ce66"
 								 inactive-color="#ff4949"></st-switch>
 		</div>
+
+		<div>
+			<st-radio v-model="gender"
+								label="0">女</st-radio>
+			<st-radio v-model="gender"
+								label="1">男</st-radio>
+
+			<st-radio-group v-model="hobby">
+				<st-radio label="football">足球</st-radio>
+				<st-radio label="tennis">网球</st-radio>
+				<st-radio label="basketball">篮球</st-radio>
+			</st-radio-group>
+		</div>
+
+		<div>
+			<st-checkbox-group v-model="hobbies">
+				<st-checkbox label="football">足球</st-checkbox>
+				<st-checkbox label="tennis">网球</st-checkbox>
+				<st-checkbox label="basketball">篮球</st-checkbox>
+			</st-checkbox-group>
+		</div>
 	</div>
 </template>
 
@@ -112,7 +153,16 @@ export default {
 			visible: false,
 			disabled: true,
 			username: '',
-			active: false
+			active: false,
+			gender: '0',
+			hobby: '',
+			hobbies: [],
+			model: {
+				username: '',
+				gender: '',
+				hobbies: [],
+				hasRead: false
+			}
 		}
 	},
 	methods: {
@@ -125,7 +175,7 @@ export default {
 
 <style scoped lang="scss">
 div {
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 }
 
 #app {
