@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "38737",
+      "name": "square_check_fill",
+      "font_class": "squarecheckfill",
+      "unicode": "e6d4",
+      "unicode_decimal": 59092
+    },
+    {
       "icon_id": "29923",
       "name": "appreciate",
       "font_class": "appreciate",

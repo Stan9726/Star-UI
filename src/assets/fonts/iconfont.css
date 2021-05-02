@@ -13,6 +13,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.st-icon-squarecheckfill:before {
+  content: "\e6d4";
+}
+
 .st-icon-appreciate:before {
   content: "\e644";
 }
