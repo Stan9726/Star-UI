@@ -102,3 +102,23 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 | 事件名称 | 事件描述 |
 | :----: | :----: |
 | change | Switch状态改变事件 |
+
+### Radio组件和RadioGroup组件
+
+1. 参数支持
+
+| 参数名称 | 参数描述 | 参数类型 | 默认值 |
+| :----: | :----: | :----:| :----: |
+| v-model | 双向绑定 | boolean | false |
+| label | 单选框和value值 | string/number/boolean | '' |
+| name | name属性 | string | text |
+
+### Checkbox组件和CheckboxGroup组件
+
+1. 参数支持
+
+| 参数名称 | 参数描述 | 参数类型 | 默认值 |
+| :----: | :----: | :----:| :----: |
+| v-model | 双向绑定 | boolean | false |
+| label | 复选框和value值 | string/number/boolean | '' |
+| name | name属性 | string | text |
