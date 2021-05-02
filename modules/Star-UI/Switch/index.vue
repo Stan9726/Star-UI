@@ -41,16 +41,16 @@ export default {
 		handleClick() {
 			this.$emit('input', !this.value)
 		},
-		changeColor(flag) {
+		changeColor(active) {
 			if (this.activeColor || this.inactiveColor) {
-				const color = !flag ? this.activeColor : this.inactiveColor
+				const color = active ? this.activeColor : this.inactiveColor
 				this.$refs.core.style.borderColor = color
 				this.$refs.core.style.backgroundColor = color
 			}
 		}
 	},
 	mounted() {
-		this.changeColor(this.valeu)
+		this.changeColor(this.value)
 	},
 	watch: {
 		value(e) {
@@ -102,6 +102,7 @@ export default {
 	.st-switch_core {
 		border-color: #409eff;
 		background-color: #409eff;
+
 		.st-switch_button {
 			transform: translateX(20px);
 		}
