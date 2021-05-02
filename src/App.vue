@@ -87,6 +87,20 @@
 									 @click="confirmFn">确定</st-button>
 			</template>
 		</st-dialog>
+
+		<div>
+			<st-input placeholder="请输入用户名"
+								name="username"
+								type="text"
+								v-model="username"
+								:clearable="true"></st-input>
+		</div>
+
+		<div>
+			<st-switch v-model="active"
+								 active-color="#13ce66"
+								 inactive-color="#ff4949"></st-switch>
+		</div>
 	</div>
 </template>
 
@@ -95,7 +109,10 @@ export default {
 	name: 'App',
 	data() {
 		return {
-			visible: false
+			visible: false,
+			disabled: true,
+			username: '',
+			active: false
 		}
 	},
 	methods: {
