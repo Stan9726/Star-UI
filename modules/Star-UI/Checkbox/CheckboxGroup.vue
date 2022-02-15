@@ -1,24 +1,23 @@
 <template>
-	<div class="st-checkbox-group">
-		<slot></slot>
-	</div>
+  <div class="st-checkbox-group">
+    <slot></slot>
+  </div>
 </template>
 
 <script>
-export default {
-	name: 'StCheckboxGroup',
-	props: {
-		value: {
-			type: Array
-		}
-	},
-	provide() {
-		return {
-			CheckboxGroup: this
-		}
-	}
-}
+  export default {
+    name: 'StCheckboxGroup',
+    props: {
+      value: {
+        type: Array
+      }
+    },
+    provide() {
+      return {
+        CheckboxGroup: this
+      }
+    }
+  }
 </script>
 
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>
